@@ -1,14 +1,21 @@
 # paper-pipeline
 
-A pi/Codex skill for reproducible research-paper pipelines.
+A skill for reproducible research-paper pipelines: generated values, tables, figures, and Markdown-to-PDF builds.
 
 ## Install
 
-Install this repository as a skill using your agent's git skill installer, or copy `SKILL.md` into your skills directory.
+Point your skill installer at this repo, or copy:
 
-## What it enforces
+```text
+skills/paper-pipeline/SKILL.md
+```
 
-- Generate reported values, tables, and figures from scripts.
-- Build paper artefacts with `make`.
-- Keep generated files separate from source data/config/scripts.
-- Rebuild the final Markdown-to-LaTeX/PDF paper from a clean checkout.
+into your agent skills directory.
+
+## Layout
+
+```text
+skills/
+  paper-pipeline/
+    SKILL.md
+```
