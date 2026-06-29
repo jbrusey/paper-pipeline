@@ -1,0 +1,10 @@
+{
+  "name": "paper-pipeline",
+  "version": "0.1.0",
+  "description": "Agent skill for reproducible research-paper pipelines.",
+  "keywords": ["pi-package", "agent-skill", "research", "paper"],
+  "license": "MIT",
+  "pi": {
+    "skills": ["skills"]
+  }
+}
