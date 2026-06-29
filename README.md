@@ -7,20 +7,22 @@ A skill for reproducible research-paper pipelines: generated values, tables, fig
 ### pi
 
 ```bash
-pi install https://github.com/jbrusey/paper-pipeline
+pi install git:github.com/jbrusey/paper-pipeline
 ```
 
 Project-local install:
 
 ```bash
-pi install -l https://github.com/jbrusey/paper-pipeline
+pi install -l git:github.com/jbrusey/paper-pipeline
 ```
 
 Pinned install:
 
 ```bash
-pi install https://github.com/jbrusey/paper-pipeline@v0.1.0
+pi install git:github.com/jbrusey/paper-pipeline@v0.1.0
 ```
+
+`https://github.com/jbrusey/paper-pipeline` also works; the `git:` form is just shorter.
 
 ### Any Agent Skills-compatible tool
 
@@ -39,12 +41,4 @@ The important file is:
 
 ```text
 skills/paper-pipeline/SKILL.md
-```
-
-## Layout
-
-```text
-skills/
-  paper-pipeline/
-    SKILL.md
 ```
