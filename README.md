@@ -4,6 +4,26 @@ A skill for reproducible research-paper pipelines: generated values, tables, fig
 
 ## Install
 
+In Codex or Claude Code, enter:
+
+```text
+Install https://github.com/jbrusey/paper-pipeline as a skill.
+```
+
+The coding agent should clone the repository and install the `paper-pipeline` skill into the appropriate skills directory for the current tool.
+
+After installation, ask the agent to use it:
+
+```text
+Use the paper-pipeline skill to set up this paper repository.
+```
+
+The skill itself is located at:
+
+```text
+skills/paper-pipeline/SKILL.md
+```
+
 ### pi
 
 ```bash
@@ -31,8 +51,6 @@ Copy or symlink the skill directory into that tool's skills folder:
 ```bash
 git clone https://github.com/jbrusey/paper-pipeline.git
 cp -R paper-pipeline/skills/paper-pipeline ~/.claude/skills/
-# or
-cp -R paper-pipeline/skills/paper-pipeline ~/.codex/skills/
 # or
 cp -R paper-pipeline/skills/paper-pipeline ~/.agents/skills/
 ```
