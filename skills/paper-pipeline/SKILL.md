@@ -68,6 +68,30 @@ Our method improved performance by \AbstractImprovement{} compared with the base
 - Generate figures from source data/config and write them to the build directory.
 - Avoid manual post-processing; encode styling and filtering in the generation script.
 
+## Venue / journal style files
+
+When a venue provides LaTeX style requirements, keep the style inputs as source files and invoke them from the build rule rather than editing generated LaTeX.
+
+Use the smallest Pandoc mechanism that fits:
+
+- `-V documentclass=...` and `-V classoption=...` for venue `.cls` files.
+- `--include-in-header config/header.tex` for packages, macros, or `.sty` setup.
+- `--template config/template.tex` only when the venue requires a specific LaTeX document skeleton.
+
+Example:
+
+```make
+build/paper.pdf: paper.md references.bib config/template.tex config/header.tex
+	pandoc paper.md \
+	  --output build/paper.pdf \
+	  --bibliography references.bib \
+	  --citeproc \
+	  --template config/template.tex \
+	  --include-in-header config/header.tex
+```
+
+Do not hand-edit generated `.tex` to satisfy venue formatting; update the template, header, metadata, or build rule instead.
+
 ## Build pattern
 
 Each generated artefact should have an explicit dependency path from source to output. Example:
